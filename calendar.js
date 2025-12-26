@@ -1,23 +1,23 @@
-const calendario = document.getElementById("calendario");
-const hoje = new Date();
-const ano = hoje.getFullYear();
-const mes = hoje.getMonth();
+const calendar = document.getElementById("calendar");
+const today = new Date();
+const year = today.getFullYear();
+const month = today.getMonth();
 
 fetch("reservas.json")
-.then(r => r.json())
+.then(res => res.json())
 .then(reservas => {
-  const diasNoMes = new Date(ano, mes + 1, 0).getDate();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-  for (let i = 1; i <= diasNoMes; i++) {
-    const data = `${ano}-${String(mes+1).padStart(2,"0")}-${String(i).padStart(2,"0")}`;
+  for (let d = 1; d <= daysInMonth; d++) {
+    const date = `${year}-${String(month+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
     const div = document.createElement("div");
     div.className = "day";
-    div.innerText = i;
+    div.innerText = d;
 
-    if (reservas.includes(data)) {
+    if (reservas.includes(date)) {
       div.classList.add("alugada");
     }
 
-    calendario.appendChild(div);
+    calendar.appendChild(div);
   }
 });
