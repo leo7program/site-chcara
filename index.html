@@ -2,29 +2,40 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Chácara Recanto Verde</title>
+<title>Chácara Vale Verde</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
 <header>
+  <img src="logo.png" class="logo">
   <h1>Chácara Vale Verde</h1>
-  <a href="login.html">Login</a>
 </header>
 
-<h2>Fotos do Local</h2>
+<h2>Galeria</h2>
 <div class="galeria">
   <img src="https://picsum.photos/300/200?1">
   <img src="https://picsum.photos/300/200?2">
   <img src="https://picsum.photos/300/200?3">
 </div>
 
-<h2>Datas Alugadas</h2>
-<div id="calendario"></div>
+<h2>Disponibilidade</h2>
+<div id="calendario" class="calendar"></div>
 
-<a class="whats" href="https://wa.me/5511997869751" target="_blank">
-Falar com o proprietário no WhatsApp
-</a>
+<div class="botoes">
+  <a class="whats" href="https://wa.me/55999999999" target="_blank">
+    <i class="fab fa-whatsapp"></i> WhatsApp
+  </a>
+
+  <a class="insta" href="https://www.instagram.com/valeverdesbc/" target="_blank">
+    <i class="fab fa-instagram"></i> Instagram
+  </a>
+
+  <a class="admin" href="login.html">
+    Área do Administrador
+  </a>
+</div>
 
 <script src="calendar.js"></script>
 </body>
